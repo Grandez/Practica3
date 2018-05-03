@@ -26,6 +26,12 @@
         android:id="@+id/tvNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:paddingTop="@dimen/pad_vertical_long"
+        android:paddingBottom="@dimen/pad_vertical_long"
+
         android:gravity="center"
         />
 
@@ -40,6 +46,7 @@
             android:id="@+id/lblFecha"
             android:layout_width="@dimen/col_1"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryLight"
             android:text="@string/lbl_fecha" />
 
 
@@ -47,7 +54,10 @@
            android:id="@+id/tvFecha"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-        />
+           android:textColor="@color/colorPrimaryText"
+           android:textStyle="bold"
+
+           />
 
     </LinearLayout>
 
@@ -62,6 +72,7 @@
            android:id="@+id/lblTfno"
            android:layout_width="@dimen/col_1"
            android:layout_height="wrap_content"
+           android:textColor="@color/colorPrimaryLight"
            android:text="@string/lbl_tfno"
        />
 
@@ -69,7 +80,10 @@
            android:id="@+id/tvTfno"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-        />
+           android:textColor="@color/colorPrimaryText"
+           android:textStyle="bold"
+
+           />
 
     </LinearLayout>
 
@@ -84,14 +98,18 @@
            android:id="@+id/lblMail"
            android:layout_width="@dimen/col_1"
            android:layout_height="wrap_content"
-           android:text="@string/lbl_mail"
+           android:textColor="@color/colorPrimaryLight"
+           android:text="@string/lbl_correo"
        />
 
        <TextView
           android:id="@+id/tvMail"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-       />
+           android:textColor="@color/colorPrimaryText"
+           android:textStyle="bold"
+
+           />
 
     </LinearLayout>
 
@@ -106,6 +124,7 @@
             android:id="@+id/lblDesc"
             android:layout_width="@dimen/col_1"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryLight"
             android:text="@string/lbl_desc"
             />
 
@@ -113,6 +132,8 @@
             android:id="@+id/tvDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold"
             />
 
     </LinearLayout>

@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:textSize = "@dimen/font_size"
                 android:singleLine="true"
-                android:hint="@string/lbl_mail" />
+                android:hint="@string/lbl_correo" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout

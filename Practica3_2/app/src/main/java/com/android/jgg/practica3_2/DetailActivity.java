@@ -10,17 +10,20 @@ import java.text.SimpleDateFormat;
 
 public class DetailActivity extends AppCompatActivity {
 
+    Contacto contacto = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         Bundle extras = getIntent().getExtras();
-        Contacto contacto = extras.getParcelable("contacto");
+        contacto = extras.getParcelable("contacto");
         cargaPantalla(contacto);
     }
 
     public void btnEdit_onClick(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("contacto", contacto);
         startActivity(intent);
     }
 
@@ -34,7 +37,7 @@ public class DetailActivity extends AppCompatActivity {
         text = (TextView) findViewById(R.id.tvDesc);
         text.setText(contacto.getDesc());
 
-        SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         text = (TextView) findViewById(R.id.tvFecha);
         text.setText(format.format(contacto.getFecha()));
 

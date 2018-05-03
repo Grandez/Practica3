@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         contacto.setDesc(text.getText().toString());
 
         DatePicker  dt = (DatePicker) findViewById(R.id.datePicker);
-        contacto.setFecha(new Date(dt.getYear(), dt.getMonth(), dt.getDayOfMonth()));
+        contacto.setFecha(new Date(dt.getYear() - 1900, dt.getMonth(), dt.getDayOfMonth()));
 
         return contacto;
     }
