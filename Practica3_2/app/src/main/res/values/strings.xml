@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mis contactos</string>
+    <string name="lbl_nombre">Nombre completo</string>
+    <string name="lbl_tfno">Telefono</string>
+    <string name="lbl_mail">Correo</string>
+    <string name="lbl_desc">Descripcion</string>
+    <string name="lbl_fecha">Fecha de nacimiento</string>
+    <string name="form_confirmar">Confirmar datos</string>
+    <string name="btn_next">Siguiente</string>
+    <string name="btn_edit">Editar</string>
+</resources>
