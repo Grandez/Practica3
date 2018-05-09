@@ -39,6 +39,14 @@ public class MascotaService {
         return res;
     }
 
+    public void incRating(int id) {
+        for (Mascota m : mascotas) {
+            if (m.getId() == id) {
+                m.incRating();
+                break;
+            }
+        }
+    }
     private MascotaService() {
         loadMascotas();
     }

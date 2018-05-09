@@ -28,11 +28,11 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnRate"
+                android:id="@+id/btnLike"
                 android:src="@drawable/hueso_blanco"
                 android:background="#ffffff"
-                android:onClick="incRating"
                 android:contentDescription="Mascota"
+                android:tooltipText="@string/rate_me"
                 />
 
             <TextView

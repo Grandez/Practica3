@@ -26,10 +26,23 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
     @Override
     public void onBindViewHolder(@NonNull MascotaViewHolder holder, int position) {
-        Mascota mascota = mascotas.get(position);
+
+
+        final Mascota mascota = mascotas.get(position);
         holder.mFoto.setImageResource(mascota.getImg());
         holder.mNombre.setText(mascota.getNombre());
         holder.mRating.setText(mascota.getRatingAsString());
+
+        MascotaViewHolder.mLike.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                MascotaService srv = MascotaService.getInstance();
+                Toast.makeText(v.getContext(), "Diste like a " + mascota.getNombre(),
+                        Toast.LENGTH_SHORT).show();
+                srv.incRating(mascota.getId());
+            }
+        });
     }
 
     @Override
@@ -37,12 +50,12 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
         return mascotas.size();
     }
 
-    public class MascotaViewHolder extends RecyclerView.ViewHolder {
+    public static class MascotaViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView mNombre;
         TextView mRating;
         ImageView mFoto;
-
+        static ImageButton mLike;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
@@ -50,6 +63,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
             mNombre = itemView.findViewById(R.id.mNombre);
             mRating = itemView.findViewById(R.id.mRating);
             mFoto   = (ImageView) itemView.findViewById(R.id.mFoto);
+            mLike = (ImageButton) itemView.findViewById(R.id.btnLike);
 
         }
     }

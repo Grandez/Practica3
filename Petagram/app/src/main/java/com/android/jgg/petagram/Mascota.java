@@ -44,6 +44,10 @@ public class Mascota implements Comparable {
         return Integer.toString(rating);
     }
 
+    public void incRating() {
+        rating++;
+    }
+
     @Override
     public int compareTo(Object other) {
         int res= ((Mascota) other).getRating();
