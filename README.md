@@ -2,5 +2,6 @@
 
 <p align="center">
 
-  <img src="https://github.com/Grandez/Practica3/blob/master/Practica3_2/screenshot.png"/>
+  <img src="https://github.com/Grandez/Practica3/blob/master/Petagram/Petagram.png"/>
+  
 </p>
